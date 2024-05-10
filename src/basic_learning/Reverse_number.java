@@ -1,10 +1,11 @@
 package basic_learning;
+
 import java.util.Scanner;
 
 public class Reverse_number {
 
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
                 int number;
                 int reversedNumber;
@@ -22,8 +23,9 @@ public class Reverse_number {
         public static int reverse(int number) {
                 int reversedNumber = 0;
                 while (number > 0) {
+
                         int digit = number % 10;
-                        reversedNumber = reversedNumber * 10 + digit;
+                        reversedNumber = (reversedNumber *10 )+ digit;
                         number = number/10;
                 }
                 return reversedNumber;
