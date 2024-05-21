@@ -9,7 +9,8 @@ public class Basic_calculator {
         System.out.print("\n\n");
 
 
-        while (true) {
+                double a = 0;
+                double b = 0;
 
                 System.out.println(" Addition       +     ----> Type 1 to Proceed ");
                 System.out.println(" Subtraction    -     ----> Type 2 to Proceed ");
@@ -20,10 +21,16 @@ public class Basic_calculator {
                 System.out.println(" What arithmetic operation do you want to do ? ");
                 int dp = scanner.nextInt();
 
-                System.out.print("Enter the First number : ");
-                double a = scanner.nextDouble();
-                System.out.print("Enter the Second number : ");
-                double b = scanner.nextDouble();
+                if (dp <= 0 || dp > 4 ){
+                    System.out.println("Invalid Entry !");
+                }
+                else {
+                    System.out.print("Enter the First number : ");
+                    a = scanner.nextDouble();
+                    System.out.print("Enter the Second number : ");
+                    b = scanner.nextDouble();
+                }
+
 
                 switch (dp) {
                     case 1:
@@ -39,7 +46,7 @@ public class Basic_calculator {
                             sub = a - b;
                             System.out.println(" The subtraction of two numbers is " + sub);
                         }
-
+                        break;
                     case 3:
                         double mul = a * b;
                         System.out.println(" The multiplication of two numbers is " + mul);
@@ -51,13 +58,12 @@ public class Basic_calculator {
                         break;
 
                     default:
-                        System.out.println("Invalid input. Please try again.");
+                        System.out.println(" Please try again. ");
                         break;
             }
 
-            System.out.println();
+           // System.out.println();
         }
 
     }
 
-}
